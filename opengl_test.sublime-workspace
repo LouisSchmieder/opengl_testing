@@ -1,0 +1,289 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mat",
+				"mat4"
+			],
+			[
+				"in",
+				"identity"
+			],
+			[
+				"f32",
+				"f32_calloc"
+			],
+			[
+				"mul",
+				"mul_mat4x4"
+			],
+			[
+				"f",
+				"f32"
+			],
+			[
+				"rotate",
+				"rotate_z"
+			],
+			[
+				"Mat",
+				"Mat4x4"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"vert",
+				"vertex_attrib_pointer"
+			],
+			[
+				"vco",
+				"vcol_location"
+			],
+			[
+				"vpos",
+				"vpos_location"
+			],
+			[
+				"verte",
+				"vertex_shader"
+			],
+			[
+				"com",
+				"compile_shader"
+			],
+			[
+				"frag",
+				"fragment_src"
+			],
+			[
+				"GL",
+				"GL_VERTEX_SHADER"
+			],
+			[
+				"fram",
+				"fragment_shader"
+			],
+			[
+				"verete",
+				"vertex_shader"
+			],
+			[
+				"ver",
+				"vertex_shader"
+			],
+			[
+				"vertex",
+				"vertex_buffer"
+			],
+			[
+				"fra",
+				"fragment_shader"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Install Package Control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/louis/programming/compiler/v_prooxey/vlib/glm/glm_test.v",
+		"/home/louis/programming/compiler/v_prooxey/vlib/glm/glm.v",
+		"/home/louis/programming/compiler/v_prooxey/vlib/gl/gl.v",
+		"/home/louis/programming/V/opengl_testing/opengl_testing.v",
+		"/home/louis/programming/compiler/v_prooxey/vlib/gl/1shader.v",
+		"/home/louis/programming/compiler/v_prooxey/thirdparty/glad/glad.h",
+		"/home/louis/programming/V/opengl_testing/shader/shader.vert",
+		"/home/louis/programming/V/opengl_testing/shader/shader.frag",
+		"/home/louis/programming/compiler/v_prooxey/vlib/glfw/glfw.v",
+		"/home/louis/programming/compiler/v_prooxey/thirdparty/glfw/GLFW/glfw3.h",
+		"/home/louis/programming/compiler/v_prooxey/thirdparty/glfw/GLFW/glfw3native.h",
+		"/home/louis/programming/compiler/v_prooxey/cmd/tools/fast/fast_main.js",
+		"/home/louis/Downloads/file_type_vlang.svg",
+		"/home/louis/.cache/.fr-zyDuku/README.md",
+		"/home/louis/programming/V/prooxeydev/VEngine/v_engine.v",
+		"/home/louis/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/louis/programming/V/v.sublime-build"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mat4",
+			"ortho",
+			"mul",
+			"mult",
+			"ortho",
+			"multi",
+			"mul",
+			"ortho",
+			"time",
+			"rotate",
+			"mat4",
+			"location",
+			"buffer",
+			"time",
+			"glfwInit",
+			"init",
+			"= C"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "opengl_test.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
