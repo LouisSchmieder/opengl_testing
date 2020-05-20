@@ -31,7 +31,10 @@ pub fn (camera Camera) to_position() glm.Vec3 {
 }
 
 pub fn (camera Camera) to_neg_position() glm.Vec3 {
-	return glm.vec3(-camera.position[0], -camera.position[1], -camera.position[2])
+	x := camera.position[0] * -1
+	y := camera.position[1] * -1
+	z := camera.position[2] * -1
+	return glm.vec3(x, y, z)
 }
 
 pub fn (mut camera Camera) move(keys []bool) {
