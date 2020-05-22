@@ -1,8 +1,7 @@
-module renderengine
+module models
 
 import gl
 import stbi
-import models
 
 struct Loader {
 mut:
@@ -19,7 +18,7 @@ pub fn create_loader() &Loader {
 	}
 }
 
-pub fn (loader Loader) load_to_vao(positions, texture_coords []f32, indicies []int) models.RawModel {
+pub fn (loader Loader) load_to_vao(positions, texture_coords []f32, indicies []int) RawModel {
 	vao_id := loader.create_vao()
 	loader.bind_indicies_buffer(indicies)
 	loader.store_data_in_attrib_list(0, 3, positions)
