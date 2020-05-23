@@ -3,10 +3,10 @@ module entities
 import glm
 
 const (
-	FORWARD = 87
-	BACKWARDS = 83
-	LEFT = 65
-	RIGHT = 68
+	forward = 87
+	backwards = 83
+	left = 65
+	right = 68
 )
 
 struct Camera {
@@ -38,16 +38,16 @@ pub fn (camera Camera) to_neg_position() glm.Vec3 {
 }
 
 pub fn (mut camera Camera) move(keys []bool) {
-	if keys[FORWARD] {
+	if keys[forward] {
 		camera.position[2] -= .02
 	}
-	if keys[BACKWARDS] {
+	if keys[backwards] {
 		camera.position[2] += .02
 	}
-	if keys[RIGHT] {
+	if keys[right] {
 		camera.position[0] += .02
 	}
-	if keys[LEFT] {
+	if keys[left] {
 		camera.position[0] -= .02
 	}
 }

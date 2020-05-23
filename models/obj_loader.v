@@ -32,33 +32,35 @@ pub fn load_obj_model(file string, loader Loader) RawModel {
 	mut f := false
 	for line in lines {
 		c_line := line.split(' ')
-		if line.starts_with('v ') {
-			verticies << Vertex{c_line[1].f32(), c_line[2].f32(), c_line[2].f32()}
-		} else if line.starts_with('vt ') {
-			textures << Texture{c_line[1].f32(), c_line[2].f32()}
-		} else if line.starts_with('vn ') {
-			normals << Normal{c_line[1].f32(), c_line[2].f32(), c_line[2].f32()}
-		} else if line.starts_with('f ') {
-			if !f {
-				a_textures = []f32{len: verticies.len * 2}
-				a_normals = []f32{len: verticies.len * 3}
-			}
-			v1 := c_line[1].split('/')
-			v2 := c_line[2].split('/')
-			v3 := c_line[3].split('/')
+		if c_line.len > 0 {		
+			if c_line[0] == 'v' {
+				verticies << Vertex{c_line[1].f32(), c_line[2].f32(), c_line[3].f32()}
+			} else if c_line[0] == 'vt' {
+				textures << Texture{c_line[1].f32(), c_line[2].f32()}
+			} else if c_line[0] == 'vn' {
+				normals << Normal{c_line[1].f32(), c_line[2].f32(), c_line[3].f32()}
+			} else if c_line[0] == 'f' {
+				if !f {
+					a_textures = []f32{len: verticies.len * 2}
+					a_normals = []f32{len: verticies.len * 3}
+				}
+				v1 := c_line[1].split('/')
+				v2 := c_line[2].split('/')
+				v3 := c_line[3].split('/')
 
-			mut i, mut t, mut n := process_vertex(v1, indicies, verticies, textures, normals, a_textures, a_normals)
-			indicies = i
-			a_textures = t
-			a_normals = n
-			i, t, n = process_vertex(v2, indicies, verticies, textures, normals, a_textures, a_normals)
-			indicies = i
-			a_textures = t
-			a_normals = n
-			i, t, n = process_vertex(v3, indicies, verticies, textures, normals, a_textures, a_normals)
-			indicies = i
-			a_textures = t
-			a_normals = n
+				mut i, mut t, mut n := process_vertex(v1, indicies, verticies, textures, normals, a_textures, a_normals)
+				indicies = i
+				a_textures = t
+				a_normals = n
+				i, t, n = process_vertex(v2, indicies, verticies, textures, normals, a_textures, a_normals)
+				indicies = i
+				a_textures = t
+				a_normals = n
+				i, t, n = process_vertex(v3, indicies, verticies, textures, normals, a_textures, a_normals)
+				indicies = i
+				a_textures = t
+				a_normals = n
+			}
 		}
 	}
 
@@ -83,6 +85,7 @@ fn process_vertex(vertex_data []string, i []int, verticies []Vertex, textures []
 	current_vertex := vertex_data[0].int() - 1
 	indicies << current_vertex
 	curr_tex := textures[vertex_data[1].int() - 1]
+	println(curr_tex)
 	a_textures[current_vertex * 2] = curr_tex.x
 	a_textures[current_vertex * 2 + 1] = 1 - curr_tex.y
 
