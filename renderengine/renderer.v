@@ -37,7 +37,7 @@ pub fn create_renderer(fov, near_plane, far_plane f32, display &Display, shader 
 pub fn (renderer Renderer) clear() {
 	gl.enable(C.GL_DEPTH_TEST)
 	C.glClear(C.GL_COLOR_BUFFER_BIT | C.GL_DEPTH_BUFFER_BIT)
-	gl.clear_color(0, 0, 0, 255)
+	gl.clear_color(255, 255, 255, 255)
 }
 
 pub fn (renderer Renderer) render(entity entities.Entity) {
@@ -49,7 +49,7 @@ pub fn (renderer Renderer) render(entity entities.Entity) {
 	transformation_matrix := maths.create_transformation_matrix(entity.to_position(), entity.rot_x, entity.rot_y, entity.rot_z, entity.scale)
 	renderer.shader.load_transformation_matrix(transformation_matrix)
 
-	gl.draw_elements(C.GL_TRIANGLES, model.vertex_count, C.GL_UNSIGNED_INT, 0)
+	gl.draw_elements(C.GL_LINES, model.vertex_count, C.GL_UNSIGNED_INT, 0)
 	gl.disable_vertex_attrib_array(0)
 	gl.disable_vertex_attrib_array(1)
 	gl.bind_vao(0)

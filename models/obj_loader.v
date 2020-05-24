@@ -32,6 +32,7 @@ pub fn load_obj_model(file string, loader Loader) RawModel {
 	mut f := false
 	for line in lines {
 		c_line := line.split(' ')
+		println(c_line)
 		if c_line.len > 0 {		
 			if c_line[0] == 'v' {
 				verticies << Vertex{c_line[1].f32(), c_line[2].f32(), c_line[3].f32()}
