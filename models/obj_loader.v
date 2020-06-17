@@ -19,7 +19,7 @@ struct Normal {
 	z f32
 }
 
-pub fn load_obj_model(file string, loader Loader) RawModel {
+pub fn load_obj_model(file string, mut loader Loader) RawModel {
 	data := os.read_file(file) or { panic(err) }
 	mut verticies := []Vertex{}
 	mut textures := []Texture{}

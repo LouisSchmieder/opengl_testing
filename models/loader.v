@@ -5,29 +5,29 @@ import stbi
 
 struct Loader {
 mut:
-	vaos []int
-	vbos []int
-	textures []int
+	vaos []u32
+	vbos []u32
+	textures []u32
 }
 
 pub fn create_loader() &Loader {
 	return &Loader{
-		vaos: []int{}
-		vbos: []int{}
-		textures: []int{}
+		vaos: []u32{}
+		vbos: []u32{}
+		textures: []u32{}
 	}
 }
 
-pub fn (loader Loader) load_to_vao(positions, texture_coords []f32, indicies []int) RawModel {
+pub fn (mut loader Loader) load_to_vao(positions, texture_coords []f32, indicies []int) RawModel {
 	vao_id := loader.create_vao()
 	loader.bind_indicies_buffer(indicies)
 	loader.store_data_in_attrib_list(0, 3, positions)
 	loader.store_data_in_attrib_list(1, 2, texture_coords)
 	loader.unbind_vao()
-	return models.create_raw_model(vao_id, indicies.len)
+	return create_raw_model(vao_id, indicies.len)
 }
 
-pub fn (mut loader Loader) load_texture(path string) int {
+pub fn (mut loader Loader) load_texture(path string) u32 {
 	texture := gl.gen_texture()
 	loader.textures << texture
 	img := stbi.load(path)
@@ -50,7 +50,7 @@ pub fn (loader Loader) clean_up() {
 	}
 }
 
-fn (mut loader Loader) create_vao() int {
+fn (mut loader Loader) create_vao() u32 {
 	vao_id := gl.gen_vertex_array()
 	loader.vaos << vao_id
 	gl.bind_vao(vao_id)
