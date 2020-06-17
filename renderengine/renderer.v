@@ -64,8 +64,8 @@ fn (mut renderer Renderer) create_projection_matrix() {
 
 	matrix := glm.identity()
 	mut data := matrix.data
-	data[0] = x_scale
-	data[5] = y_scale
+	data[0] = f32(x_scale)
+	data[5] = f32(y_scale)
 	data[10] = -((renderer.far_plane + renderer.near_plane) / frustum_len)
 	data[11] = -1
 	data[14] = -((2 * renderer.near_plane * renderer.far_plane) / frustum_len)
